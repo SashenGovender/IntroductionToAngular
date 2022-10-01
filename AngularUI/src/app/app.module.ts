@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MaterialModule } from './material/material.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MaterialModule } from './material/material.module';
   declarations: [
     AppComponent,
     NavbarComponent,
-    DialogComponent
+    DialogComponent,
+    HomeComponent
   ],
   //imports makes the exported declarations of other modules available in the current module
   imports: [

@@ -8,6 +8,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [],
@@ -19,7 +21,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }

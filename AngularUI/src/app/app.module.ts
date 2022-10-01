@@ -9,6 +9,7 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     NavbarComponent,
     DialogComponent,
-    HomeComponent
+    HomeComponent,
+    ProductComponent
   ],
   //imports makes the exported declarations of other modules available in the current module
   imports: [

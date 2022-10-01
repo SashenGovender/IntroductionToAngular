@@ -19,6 +19,10 @@ ng add @angular/material
 * mg g m <moduleName>
 * ng generate guard <guardName>
 
+# BackEnd Server
+* npm install json-server
+* json-server --watch angularuidatabase.json
+
 # Vs Extensions
 * [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
 * [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)

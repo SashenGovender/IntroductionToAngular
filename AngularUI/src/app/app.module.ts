@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   //providers are to make services and values known to DI. They are added to the root scope and they are injected to other services or directives that have them as dependency.
   providers: [],

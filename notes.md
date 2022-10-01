@@ -32,6 +32,7 @@ ng add @angular/material
 * [Angular Material](https://material.angular.io/components/categories)
 * [Angular Commands](https://angular.io/cli/generate)
 * [Angular Material Icon List](https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/)
+* [Currency Wiki](https://www.angularjswiki.com/angular/angular-currency-pipe-formatting-currency-in-angular/)
 
 # Learning Links
 * https://stackoverflow.com/questions/39062930/what-is-the-difference-between-declarations-providers-and-import-in-ngmodule

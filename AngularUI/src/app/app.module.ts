@@ -1,28 +1,28 @@
+import { DialogComponent } from './dialog/dialog.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './navbar/navbar.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MaterialModule } from './material/material.module';
+
 
 @NgModule({
+  //declarations are to make components,directive pipes from the current module available to other components,directive pipes in the current module.
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    DialogComponent
   ],
+  //imports makes the exported declarations of other modules available in the current module
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
+  //providers are to make services and values known to DI. They are added to the root scope and they are injected to other services or directives that have them as dependency.
   providers: [],
   bootstrap: [AppComponent]
 })

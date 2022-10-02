@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { DialogComponent } from '../product-dialog/product-dialog.component';
+import { ProductDialogComponent } from '../product-dialog/product-dialog.component';
 import { Product } from '../models/product';
 import { AngularUiApiService } from '../services/angularuiapi.service';
 
@@ -26,7 +26,7 @@ export class ProductComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(DialogComponent, {
+    this.dialog.open(ProductDialogComponent, {
       width: '30%'
     }).afterClosed().subscribe(val => {
       if (val === 'save') {
@@ -56,7 +56,7 @@ export class ProductComponent implements OnInit {
   }
 
   editProduct(row: Product) {
-    this.dialog.open(DialogComponent, {
+    this.dialog.open(ProductDialogComponent, {
       width: '30%',
       data: row
     }).afterClosed().subscribe(val => {

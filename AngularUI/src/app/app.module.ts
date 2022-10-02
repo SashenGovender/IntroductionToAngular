@@ -1,4 +1,4 @@
-import { DialogComponent } from './dialog/dialog.component';
+import { ProductDialogComponent } from './product-dialog/product-dialog.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -17,7 +17,7 @@ import { ProductComponent } from './product/product.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    DialogComponent,
+    ProductDialogComponent,
     HomeComponent,
     ProductComponent
   ],

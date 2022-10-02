@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { DialogComponent } from '../dialog/dialog.component';
+import { DialogComponent } from '../product-dialog/product-dialog.component';
 import { Product } from '../models/product';
 import { AngularUiApiService } from '../services/angularuiapi.service';
 

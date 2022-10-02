@@ -1,19 +1,19 @@
-import { Product } from './../models/product';
-import { AngularUiApiService } from './../services/angularuiapi.service';
+import { Product } from '../models/product';
+import { AngularUiApiService } from '../services/angularuiapi.service';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css']
+  templateUrl: './product-dialog.component.html',
+  styleUrls: ['./product-dialog.component.css']
 })
-export class DialogComponent implements OnInit {
+export class ProductDialogComponent implements OnInit {
   public freshnessList: Array<string> = ["Brand New", "Second Hand", "Refurbished"];
   public productForm!: FormGroup;
-
-  constructor(private formBuilder: FormBuilder, private angularUiApi: AngularUiApiService, private dialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public editData: Product) { }
+ 
+  constructor(private formBuilder: FormBuilder, private angularUiApi: AngularUiApiService, private dialogRef: MatDialogRef<ProductDialogComponent>, @Inject(MAT_DIALOG_DATA) public editData: Product) { }
 
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({

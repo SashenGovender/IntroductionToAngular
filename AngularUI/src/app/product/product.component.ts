@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ProductDialogComponent } from '../product-dialog/product-dialog.component';
 import { Product } from '../models/product';
 import { AngularUiApiService } from '../services/angularuiapi.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product',
@@ -19,7 +20,7 @@ export class ProductComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private dialog: MatDialog, private angularUiApi: AngularUiApiService) { }
+  constructor(private dialog: MatDialog, private angularUiApi: AngularUiApiService, private matSnackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -73,7 +74,13 @@ export class ProductComponent implements OnInit {
 
     this.angularUiApi.deleteProduct(id).subscribe({
       next: (result) => {
-        alert("Product Deleted");
+        this.matSnackBar.open("Product deleted successfully","",{
+          duration: 5000,
+          horizontalPosition: "right",
+          verticalPosition: "top",
+          panelClass: ["snack-style-delete"]
+        });
+        
         this.getAllProducts();
       },
       error: (error) => alert("Error while deleting")

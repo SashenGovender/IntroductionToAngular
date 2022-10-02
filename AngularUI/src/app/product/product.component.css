@@ -12,3 +12,8 @@ table {
     max-width: 1200px;
     margin: 0 auto
 }
+
+::ng-deep .snack-style-delete{
+    background-color:rgb(23, 138, 0);
+    color: white;
+}

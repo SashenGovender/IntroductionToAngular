@@ -33,6 +33,7 @@ ng add @angular/material
 * [Angular Commands](https://angular.io/cli/generate)
 * [Angular Material Icon List](https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/)
 * [Currency Wiki](https://www.angularjswiki.com/angular/angular-currency-pipe-formatting-currency-in-angular/)
+* [Snack Messages or Toastr Messages](https://edupala.com/how-to-implement-angular-material-snackbar/)
 
 # Learning Links
 * https://stackoverflow.com/questions/39062930/what-is-the-difference-between-declarations-providers-and-import-in-ngmodule

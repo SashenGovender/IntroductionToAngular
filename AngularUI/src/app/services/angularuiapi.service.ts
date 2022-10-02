@@ -23,6 +23,15 @@ export class AngularUiApiService {
       .pipe(catchError(this.handleError));
   }
 
+  updateProduct( id: number, productData: Product){
+    return this.httpClient.put<Product>(`${this.baseUrl}/products/${id}`, productData)
+    .pipe(catchError(this.handleError));
+  }
+
+  deleteProduct(id: number){
+    return this.httpClient.delete<Product>(`${this.baseUrl}/products/${id}`)
+    .pipe(catchError(this.handleError));
+  }
 
   //https://stackoverflow.com/questions/68655492/throwerrorerror-is-now-deprecated-but-there-is-no-new-errorhttperrorresponse
   private handleError(err: HttpErrorResponse): Observable<never> {

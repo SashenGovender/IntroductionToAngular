@@ -1,13 +1,22 @@
 {
   "products": [
     {
-      "productName": "Apple",
+      "productName": "Apples",
       "category": "Fruits",
       "freshness": "Brand New",
       "price": 50,
       "comment": "Green Apple",
       "date": "2022-09-30T22:00:00.000Z",
       "id": 1
+    },
+    {
+      "productName": "Orange",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 5,
+      "comment": "packet of oranges",
+      "date": "2022-09-01T22:00:00.000Z",
+      "id": 2
     }
   ],
   "comments": [

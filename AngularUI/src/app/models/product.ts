@@ -5,6 +5,7 @@ export class Product {
     price: number
     comment: string
     date: Date
+    id!: number
 
     constructor(productName: string, category: string, freshness: string, price: number, comment: string, date: Date) {
         this.productName = productName;

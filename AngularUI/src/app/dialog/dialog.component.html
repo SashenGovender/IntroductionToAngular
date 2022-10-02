@@ -36,7 +36,7 @@
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Comment</mat-label>
-            <textarea matInput id="" cols="30" rows="10" placeholder="Comments..." formControlName="comment"></textarea>
+            <textarea matInput id="" cols="20" rows="5" placeholder="Comments..." formControlName="comment"></textarea>
             <mat-hint>Enter comments</mat-hint>
         </mat-form-field>
 
@@ -44,5 +44,6 @@
 </div>
 <div mat-dialog-action [align]="'end'">
     <button mat-raised-button color="warn" mat-dialog-close>Close</button>
-    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addProduct()">Save</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addProduct()" *ngIf="editData==null">Save</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="updateProduct()" *ngIf="editData!=null">Update</button>
 </div>

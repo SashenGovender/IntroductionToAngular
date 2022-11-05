@@ -29,7 +29,7 @@ export class AngularUiApiService {
   }
 
   deleteProduct(id: number){
-    return this.httpClient.delete<Product>(`${this.baseUrl}/products/${id}`)
+    return this.httpClient.delete(`${this.baseUrl}/products/${id}`)
     .pipe(catchError(this.handleError));
   }
 

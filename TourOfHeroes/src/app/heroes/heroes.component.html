@@ -1,0 +1,10 @@
+<h2> {{hero.name | uppercase}} Details</h2>
+<div>
+    <span>id: </span> {{hero.id}}
+</div>
+<div>
+    <label for="name"> Hero name:</label>
+    <!--Here it binds the hero.name property to the HTML text box so that data can flow in both directions.
+        Data can flow from the hero.name property to the text box and from the text box back to the hero.name.-->
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>

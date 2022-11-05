@@ -1,0 +1,10 @@
+<ng-container *ngIf="hero">
+    <h2>{{hero.name | uppercase}}</h2>
+    <div>id: {{hero.id}}</div>
+    <div>
+        <label for="hero-name">Hero name:</label>
+        <!--Here it binds the hero.name property to the HTML text box so that data can flow in both directions.
+        Data can flow from the hero.name property to the text box and from the text box back to the hero.name.-->
+        <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+    </div>
+</ng-container>

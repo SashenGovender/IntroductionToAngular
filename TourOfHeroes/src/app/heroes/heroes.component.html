@@ -1,10 +1,26 @@
-<h2> {{hero.name | uppercase}} Details</h2>
-<div>
-    <span>id: </span> {{hero.id}}
-</div>
-<div>
-    <label for="name"> Hero name:</label>
-    <!--Here it binds the hero.name property to the HTML text box so that data can flow in both directions.
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+    <!--The *ngFor is Angular's repeater directive. It repeats the host element for each element in a list.-->
+    <ng-container *ngFor="let hero of heroes">
+        <li>
+            <!--The parentheses around click tell Angular to listen for the <button> element's click event.
+                 When the user clicks in the <button>, Angular executes the onSelect(hero) expression.-->
+            <button type="button" (click)="onSelectHero(hero)" [class.selected]="hero === selectedHero">
+                <span class="badge"> {{hero.id}}</span>
+                <span class="name"> {{hero.name}}</span>
+            </button>
+        </li>
+    </ng-container>
+</ul>
+
+<ng-container *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}}</h2>
+    <div>id: {{selectedHero.id}}</div>
+    <div>
+        <label for="hero-name">Hero name:</label>
+        <!--Here it binds the hero.name property to the HTML text box so that data can flow in both directions.
         Data can flow from the hero.name property to the text box and from the text box back to the hero.name.-->
-    <input id="name" [(ngModel)]="hero.name" placeholder="name">
-</div>
+        <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+</ng-container>

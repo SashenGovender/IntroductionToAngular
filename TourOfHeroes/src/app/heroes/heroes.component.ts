@@ -10,7 +10,6 @@ import { MessageService } from '../services/message.service';
 })
 export class HeroesComponent implements OnInit {
   heroes: Array<Hero> = [];
-  selectedHero?: Hero;
 
   constructor(private heroService: HeroService, private messageService: MessageService) {
    // Reserve the constructor for minimal initialization such as wiring constructor parameters to properties. The constructor shouldn't do anything. 
@@ -18,11 +17,6 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHeroes();
-  }
-
-  public onSelectHero(hero: Hero){
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }
 
   public getHeroes(): void {

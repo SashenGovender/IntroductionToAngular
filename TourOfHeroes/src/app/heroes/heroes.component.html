@@ -4,12 +4,9 @@
     <!--The *ngFor is Angular's repeater directive. It repeats the host element for each element in a list.-->
     <ng-container *ngFor="let hero of heroes">
         <li>
-            <!--The parentheses around click tell Angular to listen for the <button> element's click event.
-                 When the user clicks in the <button>, Angular executes the onSelect(hero) expression.-->
-            <button type="button" (click)="onSelectHero(hero)" [class.selected]="hero === selectedHero">
-                <span class="badge"> {{hero.id}}</span>
-                <span class="name"> {{hero.name}}</span>
-            </button>
+            <a routerLink="/detail/{{hero.id}}">
+                <span class="badge"> {{hero.id}}</span> {{hero.name}}
+            </a>
         </li>
     </ng-container>
 </ul>
@@ -17,4 +14,4 @@
 <!--[hero]="selectedHero" is an Angular property binding.
     It's a one-way data binding from the selectedHero property of the HeroesComponent to the hero property of the target element,
     which maps to the hero property of the HeroDetailComponent.-->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->

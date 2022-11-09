@@ -2,6 +2,6 @@
 <div class="heroes-menu">
     <ng-container *ngFor="let hero of heroes">
         <!--You're using Angular interpolation binding within the *ngFor repeater to insert the current iteration's hero.id into each routerLink.-->
-        <a routerLink="/details/{{hero.id}}">{{hero.name}}</a>
+        <a routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
     </ng-container>
 </div>

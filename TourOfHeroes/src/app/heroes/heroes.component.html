@@ -7,10 +7,18 @@
             <a routerLink="/detail/{{hero.id}}">
                 <span class="badge"> {{hero.id}}</span> {{hero.name}}
             </a>
+            <button type="button" class="delete" title="delete hero" (click)="deleteHero(hero)">X</button>
         </li>
     </ng-container>
 </ul>
 
+<div>
+    <label for="new-hero">Hero name:</label>
+    <input type="text" id="new-hero" #heroName>
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="addHero(heroName.value);heroName.value=''"> Add hero</button>
+</div>
 <!--[hero]="selectedHero" is an Angular property binding.
     It's a one-way data binding from the selectedHero property of the HeroesComponent to the hero property of the target element,
     which maps to the hero property of the HeroDetailComponent.-->

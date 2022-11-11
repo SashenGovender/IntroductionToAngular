@@ -21,15 +21,22 @@ export class HeroDetailComponent implements OnInit {
     this.getHero();
   }
 
+  public goBack(): void {
+    this.location.back();
+  }
+
+  public save(): void {
+    if (this.hero) {
+      this.heroService.updateHero(this.hero)
+        .subscribe(() => this.goBack())
+    }
+  }
+
   private getHero(): void {
     // The route.snapshot is a static image of the route information shortly after the component was created.
     // The paramMap is a dictionary of route parameter values extracted from the URL. Route parameters are always strings.
     const id = Number(this.route.snapshot.paramMap.get('id')); // The JavaScript Number function converts the string to a number,
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
-  }
-
-  public goBack(): void {
-    this.location.back();
   }
 }

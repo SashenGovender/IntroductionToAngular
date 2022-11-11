@@ -1,5 +1,13 @@
 <h2>My Heroes</h2>
 
+<div>
+    <label for="new-hero">Hero name:</label>
+    <input type="text" id="new-hero" #heroName>
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="addHero(heroName.value);heroName.value=''"> Add hero</button>
+</div>
+
 <ul class="heroes">
     <!--The *ngFor is Angular's repeater directive. It repeats the host element for each element in a list.-->
     <ng-container *ngFor="let hero of heroes">
@@ -12,13 +20,7 @@
     </ng-container>
 </ul>
 
-<div>
-    <label for="new-hero">Hero name:</label>
-    <input type="text" id="new-hero" #heroName>
 
-    <!-- (click) passes input value to add() and then clears the input -->
-    <button type="button" class="add-button" (click)="addHero(heroName.value);heroName.value=''"> Add hero</button>
-</div>
 <!--[hero]="selectedHero" is an Angular property binding.
     It's a one-way data binding from the selectedHero property of the HeroesComponent to the hero property of the target element,
     which maps to the hero property of the HeroDetailComponent.-->
